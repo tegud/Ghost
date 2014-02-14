@@ -9,23 +9,17 @@ config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
-        url: 'http://my-ghost-blog.com',
-
-        // Example mail config
-        // Visit http://docs.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
-
+        url: 'http://tegud-ghost-git.azurewebsites.net/',
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: '', // mailgun username
+                    pass: ''  // mailgun password
+                }
+            }
+        },
         database: {
             client: 'sqlite3',
             connection: {
@@ -48,8 +42,17 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://tegud.azurewebsites.net/',
-        mail: {},
+        url: 'http://tegud-ghost-git.azurewebsites.net/',
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: '', // mailgun username
+                    pass: ''  // mailgun password
+                }
+            }
+        },
         database: {
             client: 'sqlite3',
             connection: {
@@ -61,7 +64,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '2368'
+            port: process.env.PORT
         }
     },
 
