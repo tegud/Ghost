@@ -15,8 +15,8 @@ config = {
             options: {
                 service: 'Mailgun',
                 auth: {
-                    user: '', // mailgun username
-                    pass: ''  // mailgun password
+                    user: process.env.EmailUserName, // mailgun username
+                    pass: process.env.EmailPassword  // mailgun password
                 }
             }
         },
@@ -48,8 +48,8 @@ config = {
             options: {
                 service: 'Mailgun',
                 auth: {
-                    user: '', // mailgun username
-                    pass: ''  // mailgun password
+                    user: process.env.EmailUserName, // mailgun username
+                    pass: process.env.EmailPassword  // mailgun password
                 }
             }
         },
