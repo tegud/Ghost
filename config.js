@@ -9,7 +9,7 @@ config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
-        url: 'http://tegud-ghost-git.azurewebsites.net/',
+        url: 'http://tegud.azurewebsites.net/',
         mail: {
             transport: 'SMTP',
             options: {
@@ -42,7 +42,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://tegud-ghost-git.azurewebsites.net/',
+        url: 'http://tegud.azurewebsites.net/',
         mail: {
             transport: 'SMTP',
             options: {
